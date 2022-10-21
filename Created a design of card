@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smoke | Javascript Text animation Effects</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="heading">
+
+        <h2>Click On the bellow Text and see the magic</h2>
+
+    </div>
+
+    <section>
+
+        <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic error harum placeat, laborum ea
+
+            culpa sapiente voluptatem nam, officia eaque incidunt odio eveniet qui blanditiis soluta accusamus
+
+            exercitationem vel sed quo perferendis quis excepturi! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit,
+
+            amet consectetur adipisicing elit. Fuga illum dolores optio. Soluta, in consectetur repellendus eius
+
+            officiis, quia unde tempora aspernatur eum ducimus temporibus, totam aut officia ipsum odio illum corrupti
+
+            dolores accusamus vel aliquid nisi molestiae quae? Necessitatibus. Lorem ipsum dolor sit amet consectetur
+
+            adipisicing elit. Dolorum eum tempora aspernatur asperiores sint expedita ad sequi labore quia voluptate,
+
+            commodi, earum error! Sint ab asperiores dolor quas quisquam fugit architecto laudantium?</p>
+
+    </section>
+
+    <script>
+
+        // now, split text into letters
+
+        const text = document.querySelector('.text');
+
+        text.innerHTML = text.textContent.replace(/\S/g,
+
+            "<span>$&</span>");
+
+        // now, add active class on hovered <span> tag
+
+        const letters = document.querySelectorAll('span');
+
+        for (let i = 0; i < letters.length; i++) {
+
+            letters[i].addEventListener("mouseover", function () {
+
+                letters[i].classList.add('active')
+
+            })
+
+        }
+
+    </script>
+
+</body>
+
+</html>
